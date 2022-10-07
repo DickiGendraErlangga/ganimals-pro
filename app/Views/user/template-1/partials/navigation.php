@@ -75,7 +75,8 @@ $menu = $model->select('*')
 								</div>
 							</div>
 						</div>
-					</div><?php elseif (!isset($_SESSION['status'])) : ?>
+					</div>
+				<?php elseif (!isset($_SESSION['status'])) : ?>
 					<div class="header__btns">
 						<a class="btn btn-grad btn-sm" href="<?= base_url() ?>auth" style="background: white; color: rgb(3,172,14);cursor: pointer;border: 1px solid rgb(3,172,14)!important;">
 							Sign-In

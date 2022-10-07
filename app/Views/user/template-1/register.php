@@ -29,8 +29,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="hr"></div>
-                            <a href="#" class="btn btn-grad">Register</a>
+                            <div class="hr" style="margin-bottom: 20px ;"></div>
+                            <button type="submit" id="btn-submit" class="btn btn-grad">Register</button>
                         </form>
                     </div>
                 </div>
