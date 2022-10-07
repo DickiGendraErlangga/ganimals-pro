@@ -11,12 +11,12 @@
 				<i class="zmdi zmdi-close"></i>
 			</div>
 		</div>
-		
+
 		<div class="header-cart-content flex-w js-pscroll">
 			<ul class="header-cart-wrapitem w-full" id="show-cart">
 				Cart is Empty
 			</ul>
-			
+
 			<div class="w-full">
 				<div class="header-cart-total w-full p-tb-40">
 					Total: <span id="total-price">-</span>

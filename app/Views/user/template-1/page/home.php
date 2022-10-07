@@ -1,247 +1,1029 @@
-<?php 
-  
-    // PRODUCT FUNCTION
-    use App\Models\Product;
-    use App\Models\Category;
+<?php
 
-    $product = new Product; 
-    $data = $product->select('*')
+// PRODUCT FUNCTION
+use App\Models\Product;
+use App\Models\Category;
+
+$product = new Product;
+$data = $product->select('*')
     ->leftJoin('category', 'prod_cate_id', 'cate_id')
     ->limit('16')
     ->get();
 
-    // CATEGORY PRODUCT
-    $category = Category::all();
-  
+// CATEGORY PRODUCT
+$category = Category::all();
+
 ?>
 
-<!-- Banner Home -->
-<div class="sec-banner bg0 p-t-95 p-b-55">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 p-b-30 m-lr-auto">
-                <!-- Block1 -->
-                <div class="block1 wrap-pic-w">
-                    <img src="<?= base_url ?>assets/template-1/images/banner-04.jpg" alt="IMG-BANNER">
-
-                    <a href="#" class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
-                        <div class="block1-txt-child1 flex-col-l">
-                            <span class="block1-name ltext-102 trans-04 p-b-8">
-                                Women
-                            </span>
-
-                            <span class="block1-info stext-102 trans-04">
-                                New Trend
-                            </span>
-                        </div>
-
-                        <div class="block1-txt-child2 p-b-4 trans-05">
-                            <div class="block1-link stext-101 cl0 trans-09">
-                                Shop Now
+<div class="home__5">
+    <div class="d-lg-flex d-md-block">
+        <div>
+        </div>
+        <div class="overflow-hidden" style="width: 100%;">
+            <div>
+                <div class="hero__5" style="margin-top: 50px;">
+                    <div class="container">
+                        <div class="row align-items-center justify-content-center gx-4">
+                            <div class="col-lg-8 col-md-12">
+                                <div class="swiper_games">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="hero__left slide_1">
+                                                <div class="hero__wrap space-y-20">
+                                                    <h2 class="hero__title">
+                                                        Trade NFT and Virtual
+                                                        In-game Items
+                                                    </h2>
+                                                    <p class="hero__text txt">Raroin among the
+                                                        top six NFT platforms on
+                                                        eips.ethereum.org, the DMarket
+                                                        marketplace enables millions of gamers
+                                                        and Esports fans</p>
+                                                    <div>
+                                                        <a class="btn btn-grad" href="Marketplace.html">
+                                                            Create Account
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="hero__left slide_2">
+                                                <div class="hero__wrap space-y-20">
+                                                    <h2 class="hero__title">
+                                                        Discover digital art and collect NFTs
+                                                    </h2>
+                                                    <p class="hero__text txt">raroin is a shared
+                                                        liquidity NFT market smart contract
+                                                        which is used by multiple websites to
+                                                        provide the users the best possible
+                                                        experience.</p>
+                                                    <div>
+                                                        <a class="btn btn-grad" href="Marketplace.html">View
+                                                            market</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="hero__left slide_3">
+                                                <div class="hero__wrap space-y-20">
+                                                    <h2 class="hero__title">
+                                                        Pull market data from our digital asset
+                                                        API
+                                                    </h2>
+                                                    <p class="hero__text txt"> raroin is a
+                                                        shared
+                                                        liquidity NFT market smart contract
+                                                        which is used by multiple websites to
+                                                        provide the users the best possible
+                                                        experience</p>
+                                                    <div>
+                                                        <a class="btn btn-grad" href="Connect-wallet.html">Connect
+                                                            wallet</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- If we need pagination -->
+                                    <div class="swiper-pagination"></div>
+                                    <!-- If we need navigation buttons -->
+                                    <div class="swiper-button-prev"></div>
+                                    <div class="swiper-button-next"></div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="box hero__right space-y-20">
+                                    <h4>Offers</h4>
+                                    <div class="cards space-y-15 position-relative">
+                                        <div class="card__item seven mb-0">
+                                            <div class="card_body space-x-10">
+                                                <div class="d-flex space-x-10">
+                                                    <div>
+                                                        <a href="Item-details.html">
+                                                            <img class="product__img" src="<?= base_url ?>assets/template-2/assets/img/bg/home5/1.png" alt="product">
+                                                        </a>
+                                                    </div>
+                                                    <div class="">
+                                                        <span class="product__name txt_sm
+			                                                            _bold">Clobber Axe</span>
+                                                        <span class="offer txt_xs">-20%%</span>
+                                                    </div>
+                                                </div>
+                                                <div class="space-x-3">
+                                                    <img class="eth__img" src="<?= base_url ?>assets/template-2/assets/img/icons/ETH-2.svg" alt="eth">
+                                                    <span class="price txt_sm _bold">365
+                                                        ETH</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card__item seven mb-0">
+                                            <div class="card_body space-x-10">
+                                                <div class="d-flex space-x-10">
+                                                    <div>
+                                                        <a href="Item-details.html">
+                                                            <img class="product__img" src="<?= base_url ?>assets/template-2/assets/img/bg/home5/2.png" alt="product">
+                                                        </a>
+                                                    </div>
+                                                    <div class="">
+                                                        <span class="product__name txt_sm
+			                                                            _bold">Clobber Axe</span>
+                                                        <span class="offer txt_xs">-20%%</span>
+                                                    </div>
+                                                </div>
+                                                <div class="space-x-3">
+                                                    <img class="eth__img" src="<?= base_url ?>assets/template-2/assets/img/icons/ETH-2.svg" alt="eth">
+                                                    <span class="price txt_sm _bold">365
+                                                        ETH</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card__item seven mb-0">
+                                            <div class="card_body space-x-10">
+                                                <div class="d-flex space-x-10">
+                                                    <div>
+                                                        <a href="Item-details.html">
+                                                            <img class="product__img" src="<?= base_url ?>assets/template-2/assets/img/bg/home5/3.png" alt="product">
+                                                        </a>
+                                                    </div>
+                                                    <div class="">
+                                                        <span class="product__name txt_sm
+			                                                            _bold">Clobber Axe</span>
+                                                        <span class="offer txt_xs">-20%%</span>
+                                                    </div>
+                                                </div>
+                                                <div class="space-x-3">
+                                                    <img class="eth__img" src="<?= base_url ?>assets/template-2/assets/img/icons/ETH-2.svg" alt="eth">
+                                                    <span class="price txt_sm _bold">365
+                                                        ETH</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card__item seven mb-0">
+                                            <div class="card_body space-x-10">
+                                                <div class="d-flex space-x-10">
+                                                    <div>
+                                                        <a href="Item-details.html">
+                                                            <img class="product__img" src="<?= base_url ?>assets/template-2/assets/img/bg/home5/4.png" alt="product">
+                                                        </a>
+                                                    </div>
+                                                    <div class="">
+                                                        <span class="product__name txt_sm
+			                                                            _bold">Clobber Axe</span>
+                                                        <span class="offer txt_xs">-20%%</span>
+                                                    </div>
+                                                </div>
+                                                <div class="space-x-3">
+                                                    <img class="eth__img" src="<?= base_url ?>assets/template-2/assets/img/icons/ETH-2.svg" alt="eth">
+                                                    <span class="price txt_sm _bold">365
+                                                        ETH</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="overlay"></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </a>
+                    </div>
                 </div>
-            </div>
+                <div class="section__games mt-80">
+                    <div class="container">
+                        <div class="space-y-30">
+                            <div class="section_head">
+                                <h2 class="section__title">Games</h2>
+                            </div>
+                            <div class="section_body swiper_games2">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper position-relative">
+                                    <div class="swiper-slide">
+                                        <a class="box card__games game_1" href="#">
+                                            <img class="logo" src="<?= base_url ?>assets/template-2/assets/img/logos/game_1.svg">
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a class="box card__games game_2" href="#">
+                                            <img class="logo" src="<?= base_url ?>assets/template-2/assets/img/logos/game_2.svg">
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a class="box card__games game_3" href="#">
+                                            <img class="logo" src="<?= base_url ?>assets/template-2/assets/img/logos/game_3.svg">
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a class="box card__games game_4" href="#">
+                                            <img class="logo" src="<?= base_url ?>assets/template-2/assets/img/logos/game_4.svg">
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a class="box card__games game_5" href="#">
+                                            <img class="logo" src="<?= base_url ?>assets/template-2/assets/img/logos/game_5.svg">
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a class="box card__games game_6" href="#">
+                                            <img class="logo" src="<?= base_url ?>assets/template-2/assets/img/logos/game_6.svg">
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a class="box card__games game_7" href="#">
+                                            <img class="logo" src="<?= base_url ?>assets/template-2/assets/img/logos/game_7.svg">
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- If we need pagination -->
+                                <div class="swiper-pagination"></div>
 
-            <div class="col-md-6 p-b-30 m-lr-auto">
-                <!-- Block1 -->
-                <div class="block1 wrap-pic-w">
-                    <img src="<?= base_url ?>assets/template-1/images/banner-05.jpg" alt="IMG-BANNER">
-
-                    <a href="#" class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
-                        <div class="block1-txt-child1 flex-col-l">
-                            <span class="block1-name ltext-102 trans-04 p-b-8">
-                                Men
-                            </span>
-
-                            <span class="block1-info stext-102 trans-04">
-                                New Trend
-                            </span>
-                        </div>
-
-                        <div class="block1-txt-child2 p-b-4 trans-05">
-                            <div class="block1-link stext-101 cl0 trans-09">
-                                Shop Now
+                                <!-- If we need navigation buttons -->
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
                             </div>
                         </div>
-                    </a>
+                    </div>
                 </div>
-            </div>
+                <div class="section__deals mt-80">
 
-            <div class="col-md-6 col-lg-4 p-b-30 m-lr-auto">
-                <!-- Block1 -->
-                <div class="block1 wrap-pic-w">
-                    <img src="<?= base_url ?>assets/template-1/images/banner-07.jpg" alt="IMG-BANNER">
+                    <div class="container">
+                        <div class="space-y-30">
+                            <div class="section_head">
+                                <h2 class="section__title">Best CS:GO Deals</h2>
+                            </div>
+                            <div class="swiper_deals">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper position-relative">
+                                    <div class="swiper-slide">
+                                        <div class="card__item eight">
+                                            <div class="card_body space-y-10">
+                                                <!-- =============== -->
+                                                <div class="card_head space-y-10">
+                                                    <span class="txt_xs color_text
+			                                                            numbering">1/6</span>
+                                                    <a href="Item-details.html">
+                                                        <img class="product__img" src="<?= base_url ?>assets/template-2/assets/img/bg/home5/21.png" alt="">
+                                                    </a>
+                                                    <div>
+                                                        <p class="txt_xs level">Level 3 </p>
+                                                    </div>
+                                                    <div class="progress">
+                                                        <div class="progress-bar" role="progressbar" style="width:
+			                                                                70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+                                                </div>
+                                                <!-- =============== -->
+                                                <div class="card_footer
+			                                                        justify-content-between">
+                                                    <div class="space-y-3">
+                                                        <div class="space-x-5 d-flex">
+                                                            <i class="ri-star-fill
+			                                                                    color_brand txt_xs"></i>
+                                                            <span class="color_brand
+			                                                                    txt_xs">Karambit</span>
+                                                        </div>
+                                                        <a href="Profile.html">
+                                                            <p class="product__name txt_sm">Rings Smasher</p>
+                                                        </a>
+                                                    </div>
+                                                    <div class="price__content space-x-5">
+                                                        <img class="eth__img" src="<?= base_url ?>assets/template-2/assets/img/icons/ETH-2.svg" alt="eth">
+                                                        <p class="price txt_sm _bold">365
+                                                            ETH</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="card__item eight">
+                                            <div class="card_body space-y-10">
+                                                <!-- =============== -->
+                                                <div class="card_head space-y-10">
+                                                    <span class="txt_xs color_text
+			                                                            numbering">2/6</span>
+                                                    <a href="Item-details.html">
+                                                        <img class="product__img" src="<?= base_url ?>assets/template-2/assets/img/bg/home5/22.png" alt="">
+                                                    </a>
+                                                    <div>
+                                                        <p class="txt_xs level">Level 3 </p>
+                                                    </div>
+                                                    <div class="progress">
+                                                        <div class="progress-bar" role="progressbar" style="width:
+			                                                                70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+                                                </div>
+                                                <!-- =============== -->
+                                                <div class="card_footer
+			                                                        justify-content-between">
+                                                    <div class="space-y-3">
+                                                        <div class="space-x-5 d-flex">
+                                                            <i class="ri-star-fill
+			                                                                    color_brand txt_xs"></i>
+                                                            <span class="color_brand
+			                                                                    txt_xs">Karambit</span>
+                                                        </div>
+                                                        <a href="Profile.html">
+                                                            <p class="product__name txt_sm">Fright Clubs</p>
+                                                        </a>
+                                                    </div>
+                                                    <div class="price__content space-x-5">
+                                                        <img class="eth__img" src="<?= base_url ?>assets/template-2/assets/img/icons/ETH-2.svg" alt="eth">
+                                                        <p class="price txt_sm _bold">524
+                                                            ETH</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="card__item eight">
+                                            <div class="card_body space-y-10">
+                                                <!-- =============== -->
+                                                <div class="card_head space-y-10">
+                                                    <span class="txt_xs color_text
+			                                                            numbering">3/6</span>
+                                                    <a href="Item-details.html">
+                                                        <img class="product__img" src="<?= base_url ?>assets/template-2/assets/img/bg/home5/23.png" alt="">
+                                                    </a>
+                                                    <div>
+                                                        <p class="txt_xs level">Level 3 </p>
+                                                    </div>
+                                                    <div class="progress">
+                                                        <div class="progress-bar" role="progressbar" style="width:
+			                                                                70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+                                                </div>
+                                                <!-- =============== -->
+                                                <div class="card_footer
+			                                                        justify-content-between">
+                                                    <div class="space-y-3">
+                                                        <div class="space-x-5 d-flex">
+                                                            <i class="ri-star-fill
+			                                                                    color_brand txt_xs"></i>
+                                                            <span class="color_brand
+			                                                                    txt_xs">Karambit</span>
+                                                        </div>
+                                                        <a href="Profile.html">
+                                                            <p class="product__name txt_sm">Metal Scythe</p>
+                                                        </a>
+                                                    </div>
+                                                    <div class="price__content space-x-5">
+                                                        <img class="eth__img" src="<?= base_url ?>assets/template-2/assets/img/icons/ETH-2.svg" alt="eth">
+                                                        <p class="price txt_sm _bold">935
+                                                            ETH</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="card__item eight">
+                                            <div class="card_body space-y-10">
+                                                <!-- =============== -->
+                                                <div class="card_head space-y-10">
+                                                    <span class="txt_xs color_text
+			                                                            numbering">4/6</span>
+                                                    <a href="Item-details.html">
+                                                        <img class="product__img" src="<?= base_url ?>assets/template-2/assets/img/bg/home5/24.png" alt="">
+                                                    </a>
+                                                    <div>
+                                                        <p class="txt_xs level">Level 3 </p>
+                                                    </div>
+                                                    <div class="progress">
+                                                        <div class="progress-bar" role="progressbar" style="width:
+			                                                                70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+                                                </div>
+                                                <!-- =============== -->
+                                                <div class="card_footer
+			                                                        justify-content-between">
+                                                    <div class="space-y-3">
+                                                        <div class="space-x-5 d-flex">
+                                                            <i class="ri-star-fill
+			                                                                    color_brand txt_xs"></i>
+                                                            <span class="color_brand
+			                                                                    txt_xs">Karambit</span>
+                                                        </div>
+                                                        <a href="Profile.html">
+                                                            <p class="product__name txt_sm">Daydream</p>
+                                                        </a>
+                                                    </div>
+                                                    <div class="price__content space-x-5">
+                                                        <img class="eth__img" src="<?= base_url ?>assets/template-2/assets/img/icons/ETH-2.svg" alt="eth">
+                                                        <p class="price txt_sm _bold">235
+                                                            ETH</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="card__item eight">
+                                            <div class="card_body space-y-10">
+                                                <!-- =============== -->
+                                                <div class="card_head space-y-10">
+                                                    <span class="txt_xs color_text
+			                                                            numbering">5/6</span>
+                                                    <a href="Item-details.html">
+                                                        <img class="product__img" src="<?= base_url ?>assets/template-2/assets/img/bg/home5/25.png" alt="">
+                                                    </a>
+                                                    <div>
+                                                        <p class="txt_xs level">Level 3 </p>
+                                                    </div>
+                                                    <div class="progress">
+                                                        <div class="progress-bar" role="progressbar" style="width:
+			                                                                70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+                                                </div>
+                                                <!-- =============== -->
+                                                <div class="card_footer
+			                                                        justify-content-between">
+                                                    <div class="space-y-3">
+                                                        <div class="space-x-5 d-flex">
+                                                            <i class="ri-star-fill
+			                                                                    color_brand txt_xs"></i>
+                                                            <span class="color_brand
+			                                                                    txt_xs">Karambit</span>
+                                                        </div>
+                                                        <a href="Profile.html">
+                                                            <p class="product__name txt_sm">Fright Clubs</p>
+                                                        </a>
+                                                    </div>
+                                                    <div class="price__content space-x-5">
+                                                        <img class="eth__img" src="<?= base_url ?>assets/template-2/assets/img/icons/ETH-2.svg" alt="eth">
+                                                        <p class="price txt_sm _bold">365
+                                                            ETH</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="card__item eight">
+                                            <div class="card_body space-y-10">
+                                                <!-- =============== -->
+                                                <div class="card_head space-y-10">
+                                                    <span class="txt_xs color_text
+			                                                            numbering">6/6&quot;</span>
+                                                    <a href="Item-details.html">
+                                                        <img class="product__img" src="<?= base_url ?>assets/template-2/assets/img/bg/home5/26.png" alt="">
+                                                    </a>
+                                                    <div>
+                                                        <p class="txt_xs level">Level 3 </p>
+                                                    </div>
+                                                    <div class="progress">
+                                                        <div class="progress-bar" role="progressbar" style="width:
+			                                                                70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+                                                </div>
+                                                <!-- =============== -->
+                                                <div class="card_footer
+			                                                        justify-content-between">
+                                                    <div class="space-y-3">
+                                                        <div class="space-x-5 d-flex">
+                                                            <i class="ri-star-fill
+			                                                                    color_brand txt_xs"></i>
+                                                            <span class="color_brand
+			                                                                    txt_xs">Karambit</span>
+                                                        </div>
+                                                        <a href="Profile.html">
+                                                            <p class="product__name txt_sm">Hot Dogger</p>
+                                                        </a>
+                                                    </div>
+                                                    <div class="price__content space-x-5">
+                                                        <img class="eth__img" src="<?= base_url ?>assets/template-2/assets/img/icons/ETH-2.svg" alt="eth">
+                                                        <p class="price txt_sm _bold">122
+                                                            ETH</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- If we need pagination -->
+                                <div class="swiper-pagination"></div>
 
-                    <a href="#" class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
-                        <div class="block1-txt-child1 flex-col-l">
-                            <span class="block1-name ltext-102 trans-04 p-b-8">
-                                Watches
-                            </span>
-
-                            <span class="block1-info stext-102 trans-04">
-                                Spring 2018
-                            </span>
-                        </div>
-
-                        <div class="block1-txt-child2 p-b-4 trans-05">
-                            <div class="block1-link stext-101 cl0 trans-09">
-                                Shop Now
+                                <!-- If we need navigation buttons -->
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
                             </div>
                         </div>
-                    </a>
+                    </div>
                 </div>
-            </div>
+                <div class="section__deals mt-80">
 
-            <div class="col-md-6 col-lg-4 p-b-30 m-lr-auto">
-                <!-- Block1 -->
-                <div class="block1 wrap-pic-w">
-                    <img src="<?= base_url ?>assets/template-1/images/banner-08.jpg" alt="IMG-BANNER">
+                    <div class="container">
+                        <div class="space-y-30">
+                            <div class="section_head">
+                                <h2 class="section__title">Best TF2 Deals</h2>
+                            </div>
+                            <div class="swiper_deals">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper position-relative">
+                                    <div class="swiper-slide">
+                                        <div class="card__item eight">
+                                            <div class="card_body space-y-10">
+                                                <!-- =============== -->
+                                                <div class="card_head space-y-10">
+                                                    <span class="txt_xs color_text
+			                                                            numbering">1/6</span>
+                                                    <a href="Item-details.html">
+                                                        <img class="product__img" src="<?= base_url ?>assets/template-2/assets/img/bg/home5/27.png" alt="">
+                                                    </a>
+                                                </div>
+                                                <!-- =============== -->
+                                                <div class="card_footer
+			                                                        justify-content-between space-x-20">
+                                                    <div class="space-y-3">
+                                                        <div class="space-x-5 d-flex">
+                                                            <i class="ri-star-fill
+			                                                                    color_brand txt_xs"></i>
+                                                            <span class="color_brand
+			                                                                    txt_xs">Karambit</span>
+                                                        </div>
+                                                        <a href="Profile.html">
+                                                            <p class="product__name txt_sm">Baba Yoga</p>
+                                                        </a>
+                                                    </div>
+                                                    <div class="price__content space-x-5">
+                                                        <img class="eth__img" src="<?= base_url ?>assets/template-2/assets/img/icons/ETH-2.svg" alt="eth">
+                                                        <p class="price txt_sm _bold">665
+                                                            ETH</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="card__item eight">
+                                            <div class="card_body space-y-10">
+                                                <!-- =============== -->
+                                                <div class="card_head space-y-10">
+                                                    <span class="txt_xs color_text
+			                                                            numbering">2/6</span>
+                                                    <a href="Item-details.html">
+                                                        <img class="product__img" src="<?= base_url ?>assets/template-2/assets/img/bg/home5/28.png" alt="">
+                                                    </a>
+                                                </div>
+                                                <!-- =============== -->
+                                                <div class="card_footer
+			                                                        justify-content-between space-x-20">
+                                                    <div class="space-y-3">
+                                                        <div class="space-x-5 d-flex">
+                                                            <i class="ri-star-fill
+			                                                                    color_brand txt_xs"></i>
+                                                            <span class="color_brand
+			                                                                    txt_xs">Karambit</span>
+                                                        </div>
+                                                        <a href="Profile.html">
+                                                            <p class="product__name txt_sm">Paul Atreides</p>
+                                                        </a>
+                                                    </div>
+                                                    <div class="price__content space-x-5">
+                                                        <img class="eth__img" src="<?= base_url ?>assets/template-2/assets/img/icons/ETH-2.svg" alt="eth">
+                                                        <p class="price txt_sm _bold">424
+                                                            ETH</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="card__item eight">
+                                            <div class="card_body space-y-10">
+                                                <!-- =============== -->
+                                                <div class="card_head space-y-10">
+                                                    <span class="txt_xs color_text
+			                                                            numbering">3/6</span>
+                                                    <a href="Item-details.html">
+                                                        <img class="product__img" src="<?= base_url ?>assets/template-2/assets/img/bg/home5/29.png" alt="">
+                                                    </a>
+                                                </div>
+                                                <!-- =============== -->
+                                                <div class="card_footer
+			                                                        justify-content-between space-x-20">
+                                                    <div class="space-y-3">
+                                                        <div class="space-x-5 d-flex">
+                                                            <i class="ri-star-fill
+			                                                                    color_brand txt_xs"></i>
+                                                            <span class="color_brand
+			                                                                    txt_xs">Karambit</span>
+                                                        </div>
+                                                        <a href="Profile.html">
+                                                            <p class="product__name txt_sm">Ravina</p>
+                                                        </a>
+                                                    </div>
+                                                    <div class="price__content space-x-5">
+                                                        <img class="eth__img" src="<?= base_url ?>assets/template-2/assets/img/icons/ETH-2.svg" alt="eth">
+                                                        <p class="price txt_sm _bold">935
+                                                            ETH</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="card__item eight">
+                                            <div class="card_body space-y-10">
+                                                <!-- =============== -->
+                                                <div class="card_head space-y-10">
+                                                    <span class="txt_xs color_text
+			                                                            numbering">4/6</span>
+                                                    <a href="Item-details.html">
+                                                        <img class="product__img" src="<?= base_url ?>assets/template-2/assets/img/bg/home5/30.png" alt="">
+                                                    </a>
+                                                </div>
+                                                <!-- =============== -->
+                                                <div class="card_footer
+			                                                        justify-content-between space-x-20">
+                                                    <div class="space-y-3">
+                                                        <div class="space-x-5 d-flex">
+                                                            <i class="ri-star-fill
+			                                                                    color_brand txt_xs"></i>
+                                                            <span class="color_brand
+			                                                                    txt_xs">Karambit</span>
+                                                        </div>
+                                                        <a href="Profile.html">
+                                                            <p class="product__name txt_sm">Jil valentine</p>
+                                                        </a>
+                                                    </div>
+                                                    <div class="price__content space-x-5">
+                                                        <img class="eth__img" src="<?= base_url ?>assets/template-2/assets/img/icons/ETH-2.svg" alt="eth">
+                                                        <p class="price txt_sm _bold">235
+                                                            ETH</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="card__item eight">
+                                            <div class="card_body space-y-10">
+                                                <!-- =============== -->
+                                                <div class="card_head space-y-10">
+                                                    <span class="txt_xs color_text
+			                                                            numbering">5/6</span>
+                                                    <a href="Item-details.html">
+                                                        <img class="product__img" src="<?= base_url ?>assets/template-2/assets/img/bg/home5/31.png" alt="">
+                                                    </a>
+                                                </div>
+                                                <!-- =============== -->
+                                                <div class="card_footer
+			                                                        justify-content-between space-x-20">
+                                                    <div class="space-y-3">
+                                                        <div class="space-x-5 d-flex">
+                                                            <i class="ri-star-fill
+			                                                                    color_brand txt_xs"></i>
+                                                            <span class="color_brand
+			                                                                    txt_xs">Karambit</span>
+                                                        </div>
+                                                        <a href="Profile.html">
+                                                            <p class="product__name txt_sm">Potassius</p>
+                                                        </a>
+                                                    </div>
+                                                    <div class="price__content space-x-5">
+                                                        <img class="eth__img" src="<?= base_url ?>assets/template-2/assets/img/icons/ETH-2.svg" alt="eth">
+                                                        <p class="price txt_sm _bold">265
+                                                            ETH</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="card__item eight">
+                                            <div class="card_body space-y-10">
+                                                <!-- =============== -->
+                                                <div class="card_head space-y-10">
+                                                    <span class="txt_xs color_text
+			                                                            numbering">6/6&quot;</span>
+                                                    <a href="Item-details.html">
+                                                        <img class="product__img" src="<?= base_url ?>assets/template-2/assets/img/bg/home5/32.png" alt="">
+                                                    </a>
+                                                </div>
+                                                <!-- =============== -->
+                                                <div class="card_footer
+			                                                        justify-content-between space-x-20">
+                                                    <div class="space-y-3">
+                                                        <div class="space-x-5 d-flex">
+                                                            <i class="ri-star-fill
+			                                                                    color_brand txt_xs"></i>
+                                                            <span class="color_brand
+			                                                                    txt_xs">Karambit</span>
+                                                        </div>
+                                                        <a href="Profile.html">
+                                                            <p class="product__name txt_sm">The Batman</p>
+                                                        </a>
+                                                    </div>
+                                                    <div class="price__content space-x-5">
+                                                        <img class="eth__img" src="<?= base_url ?>assets/template-2/assets/img/icons/ETH-2.svg" alt="eth">
+                                                        <p class="price txt_sm _bold">132
+                                                            ETH</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- If we need pagination -->
+                                <div class="swiper-pagination"></div>
 
-                    <a href="#" class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
-                        <div class="block1-txt-child1 flex-col-l">
-                            <span class="block1-name ltext-102 trans-04 p-b-8">
-                                Bags
-                            </span>
-
-                            <span class="block1-info stext-102 trans-04">
-                                Spring 2018
-                            </span>
-                        </div>
-
-                        <div class="block1-txt-child2 p-b-4 trans-05">
-                            <div class="block1-link stext-101 cl0 trans-09">
-                                Shop Now
+                                <!-- If we need navigation buttons -->
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
                             </div>
                         </div>
-                    </a>
+                    </div>
                 </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4 p-b-30 m-lr-auto">
-                <!-- Block1 -->
-                <div class="block1 wrap-pic-w">
-                    <img src="<?= base_url ?>assets/template-1/images/banner-09.jpg" alt="IMG-BANNER">
-
-                    <a href="#" class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
-                        <div class="block1-txt-child1 flex-col-l">
-                            <span class="block1-name ltext-102 trans-04 p-b-8">
-                                Accessories
-                            </span>
-
-                            <span class="block1-info stext-102 trans-04">
-                                Spring 2018
-                            </span>
-                        </div>
-
-                        <div class="block1-txt-child2 p-b-4 trans-05">
-                            <div class="block1-link stext-101 cl0 trans-09">
-                                Shop Now
+                <div class="section__shop mt-80">
+                    <div class="container">
+                        <div class="space-y-30">
+                            <div class="section_head space-y-20">
+                                <div class="d-flex space-x-30">
+                                    <h2 class="section__title">Shop</h2>
+                                    <div class="dropdown">
+                                        <button class="btn btn-dark btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Life Beyond
+                                        </button>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="#">Combat Evolved</a>
+                                            <a class="dropdown-item" href="#">Super Mario</a>
+                                            <a class="dropdown-item" href="#">Grand Theft
+                                                Auto</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mb-30_reset">
+                                <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
+                                    <div class="card__item eight">
+                                        <span class="txt_xs color_text stars"><i class="ri-star-fill txt_xs"></i>12x</span>
+                                        <div class="card_body space-y-10">
+                                            <!-- =============== -->
+                                            <div class="card_head space-y-10">
+                                                <span class="txt_xs color_text numbering">1/8</span>
+                                                <a href="Item-details.html">
+                                                    <img class="product__img" src="<?= base_url ?>assets/template-2/assets/img/bg/home5/33.png" alt="">
+                                                </a>
+                                            </div>
+                                            <!-- =============== -->
+                                            <div class="card_footer justify-content-between
+			                                                    space-x-20">
+                                                <div class="space-y-3">
+                                                    <div class="space-x-5 d-flex">
+                                                        <i class="ri-star-fill color_brand
+			                                                                txt_xs"></i>
+                                                        <span class="color_brand txt_xs">Karambit</span>
+                                                    </div>
+                                                    <a href="Profile.html">
+                                                        <p class="product__name txt_sm">Sanctum</p>
+                                                    </a>
+                                                </div>
+                                                <div class="price__content space-x-5">
+                                                    <img class="eth__img" src="<?= base_url ?>assets/template-2/assets/img/icons/ETH-2.svg" alt="eth">
+                                                    <p class="price txt_sm _bold">665
+                                                        ETH</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
+                                    <div class="card__item eight">
+                                        <span class="txt_xs color_text stars"><i class="ri-star-fill txt_xs"></i>10x</span>
+                                        <div class="card_body space-y-10">
+                                            <!-- =============== -->
+                                            <div class="card_head space-y-10">
+                                                <span class="txt_xs color_text numbering">2/8</span>
+                                                <a href="Item-details.html">
+                                                    <img class="product__img" src="<?= base_url ?>assets/template-2/assets/img/bg/home5/34.png" alt="">
+                                                </a>
+                                            </div>
+                                            <!-- =============== -->
+                                            <div class="card_footer justify-content-between
+			                                                    space-x-20">
+                                                <div class="space-y-3">
+                                                    <div class="space-x-5 d-flex">
+                                                        <i class="ri-star-fill color_brand
+			                                                                txt_xs"></i>
+                                                        <span class="color_brand txt_xs">Karambit</span>
+                                                    </div>
+                                                    <a href="Profile.html">
+                                                        <p class="product__name txt_sm">Black Violet</p>
+                                                    </a>
+                                                </div>
+                                                <div class="price__content space-x-5">
+                                                    <img class="eth__img" src="<?= base_url ?>assets/template-2/assets/img/icons/ETH-2.svg" alt="eth">
+                                                    <p class="price txt_sm _bold">424
+                                                        ETH</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
+                                    <div class="card__item eight">
+                                        <span class="txt_xs color_text stars"><i class="ri-star-fill txt_xs"></i>16x</span>
+                                        <div class="card_body space-y-10">
+                                            <!-- =============== -->
+                                            <div class="card_head space-y-10">
+                                                <span class="txt_xs color_text numbering">3/8</span>
+                                                <a href="Item-details.html">
+                                                    <img class="product__img" src="<?= base_url ?>assets/template-2/assets/img/bg/home5/35.png" alt="">
+                                                </a>
+                                            </div>
+                                            <!-- =============== -->
+                                            <div class="card_footer justify-content-between
+			                                                    space-x-20">
+                                                <div class="space-y-3">
+                                                    <div class="space-x-5 d-flex">
+                                                        <i class="ri-star-fill color_brand
+			                                                                txt_xs"></i>
+                                                        <span class="color_brand txt_xs">Karambit</span>
+                                                    </div>
+                                                    <a href="Profile.html">
+                                                        <p class="product__name txt_sm">Wings</p>
+                                                    </a>
+                                                </div>
+                                                <div class="price__content space-x-5">
+                                                    <img class="eth__img" src="<?= base_url ?>assets/template-2/assets/img/icons/ETH-2.svg" alt="eth">
+                                                    <p class="price txt_sm _bold">935
+                                                        ETH</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
+                                    <div class="card__item eight">
+                                        <span class="txt_xs color_text stars"><i class="ri-star-fill txt_xs"></i>15x</span>
+                                        <div class="card_body space-y-10">
+                                            <!-- =============== -->
+                                            <div class="card_head space-y-10">
+                                                <span class="txt_xs color_text numbering">4/8</span>
+                                                <a href="Item-details.html">
+                                                    <img class="product__img" src="<?= base_url ?>assets/template-2/assets/img/bg/home5/36.png" alt="">
+                                                </a>
+                                            </div>
+                                            <!-- =============== -->
+                                            <div class="card_footer justify-content-between
+			                                                    space-x-20">
+                                                <div class="space-y-3">
+                                                    <div class="space-x-5 d-flex">
+                                                        <i class="ri-star-fill color_brand
+			                                                                txt_xs"></i>
+                                                        <span class="color_brand txt_xs">Karambit</span>
+                                                    </div>
+                                                    <a href="Profile.html">
+                                                        <p class="product__name txt_sm">Witheout</p>
+                                                    </a>
+                                                </div>
+                                                <div class="price__content space-x-5">
+                                                    <img class="eth__img" src="<?= base_url ?>assets/template-2/assets/img/icons/ETH-2.svg" alt="eth">
+                                                    <p class="price txt_sm _bold">235
+                                                        ETH</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
+                                    <div class="card__item eight">
+                                        <span class="txt_xs color_text stars"><i class="ri-star-fill txt_xs"></i>10x</span>
+                                        <div class="card_body space-y-10">
+                                            <!-- =============== -->
+                                            <div class="card_head space-y-10">
+                                                <span class="txt_xs color_text numbering">5/8</span>
+                                                <a href="Item-details.html">
+                                                    <img class="product__img" src="<?= base_url ?>assets/template-2/assets/img/bg/home5/37.png" alt="">
+                                                </a>
+                                            </div>
+                                            <!-- =============== -->
+                                            <div class="card_footer justify-content-between
+			                                                    space-x-20">
+                                                <div class="space-y-3">
+                                                    <div class="space-x-5 d-flex">
+                                                        <i class="ri-star-fill color_brand
+			                                                                txt_xs"></i>
+                                                        <span class="color_brand txt_xs">Karambit</span>
+                                                    </div>
+                                                    <a href="Profile.html">
+                                                        <p class="product__name txt_sm">Jett</p>
+                                                    </a>
+                                                </div>
+                                                <div class="price__content space-x-5">
+                                                    <img class="eth__img" src="<?= base_url ?>assets/template-2/assets/img/icons/ETH-2.svg" alt="eth">
+                                                    <p class="price txt_sm _bold">265
+                                                        ETH</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
+                                    <div class="card__item eight">
+                                        <span class="txt_xs color_text stars"><i class="ri-star-fill txt_xs"></i>13x</span>
+                                        <div class="card_body space-y-10">
+                                            <!-- =============== -->
+                                            <div class="card_head space-y-10">
+                                                <span class="txt_xs color_text numbering">6/8</span>
+                                                <a href="Item-details.html">
+                                                    <img class="product__img" src="<?= base_url ?>assets/template-2/assets/img/bg/home5/38.png" alt="">
+                                                </a>
+                                            </div>
+                                            <!-- =============== -->
+                                            <div class="card_footer justify-content-between
+			                                                    space-x-20">
+                                                <div class="space-y-3">
+                                                    <div class="space-x-5 d-flex">
+                                                        <i class="ri-star-fill color_brand
+			                                                                txt_xs"></i>
+                                                        <span class="color_brand txt_xs">Karambit</span>
+                                                    </div>
+                                                    <a href="Profile.html">
+                                                        <p class="product__name txt_sm">Spooky</p>
+                                                    </a>
+                                                </div>
+                                                <div class="price__content space-x-5">
+                                                    <img class="eth__img" src="<?= base_url ?>assets/template-2/assets/img/icons/ETH-2.svg" alt="eth">
+                                                    <p class="price txt_sm _bold">132
+                                                        ETH</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
+                                    <div class="card__item eight">
+                                        <span class="txt_xs color_text stars"><i class="ri-star-fill txt_xs"></i>12x</span>
+                                        <div class="card_body space-y-10">
+                                            <!-- =============== -->
+                                            <div class="card_head space-y-10">
+                                                <span class="txt_xs color_text numbering">7/8</span>
+                                                <a href="Item-details.html">
+                                                    <img class="product__img" src="<?= base_url ?>assets/template-2/assets/img/bg/home5/39.png" alt="">
+                                                </a>
+                                            </div>
+                                            <!-- =============== -->
+                                            <div class="card_footer justify-content-between
+			                                                    space-x-20">
+                                                <div class="space-y-3">
+                                                    <div class="space-x-5 d-flex">
+                                                        <i class="ri-star-fill color_brand
+			                                                                txt_xs"></i>
+                                                        <span class="color_brand txt_xs">Karambit</span>
+                                                    </div>
+                                                    <a href="Profile.html">
+                                                        <p class="product__name txt_sm">Raven</p>
+                                                    </a>
+                                                </div>
+                                                <div class="price__content space-x-5">
+                                                    <img class="eth__img" src="<?= base_url ?>assets/template-2/assets/img/icons/ETH-2.svg" alt="eth">
+                                                    <p class="price txt_sm _bold">132
+                                                        ETH</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
+                                    <div class="card__item eight">
+                                        <span class="txt_xs color_text stars"><i class="ri-star-fill txt_xs"></i>14x</span>
+                                        <div class="card_body space-y-10">
+                                            <!-- =============== -->
+                                            <div class="card_head space-y-10">
+                                                <span class="txt_xs color_text numbering">8/8</span>
+                                                <a href="Item-details.html">
+                                                    <img class="product__img" src="<?= base_url ?>assets/template-2/assets/img/bg/home5/40.png" alt="">
+                                                </a>
+                                            </div>
+                                            <!-- =============== -->
+                                            <div class="card_footer justify-content-between
+			                                                    space-x-20">
+                                                <div class="space-y-3">
+                                                    <div class="space-x-5 d-flex">
+                                                        <i class="ri-star-fill color_brand
+			                                                                txt_xs"></i>
+                                                        <span class="color_brand txt_xs">Karambit</span>
+                                                    </div>
+                                                    <a href="Profile.html">
+                                                        <p class="product__name txt_sm">Monks</p>
+                                                    </a>
+                                                </div>
+                                                <div class="price__content space-x-5">
+                                                    <img class="eth__img" src="<?= base_url ?>assets/template-2/assets/img/icons/ETH-2.svg" alt="eth">
+                                                    <p class="price txt_sm _bold">132
+                                                        ETH</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
-
-<!-- Product -->
-<section class="bg0 p-t-23 p-b-130">
-    <div class="container">
-        <div class="p-b-10">
-            <h3 class="ltext-103 cl5">
-                Product Overview
-            </h3>
-        </div>
-
-        <div class="flex-w flex-sb-m p-b-52">
-            <div class="flex-w flex-l-m filter-tope-group m-tb-10">
-                <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 how-active1" data-filter="*">
-                    All Products
-                </button>
-
-                <?php foreach($category as $c) : ?>
-                    <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".<?= $c['cate_name'] ?>">
-                        <?= $c['cate_name'] ?>
-                    </button>
-                <?php endforeach ?>
-            
-            </div>
-
-            <div class="flex-w flex-c-m m-tb-10">
-                <!-- Filter Button -->
-                <!-- TEMPLATE FILTER -->
-
-                <div class="flex-c-m stext-106 cl6 size-105 bor4 pointer hov-btn3 trans-04 m-tb-4 js-show-search">
-                    <i class="icon-search cl2 m-r-6 fs-15 trans-04 zmdi zmdi-search"></i>
-                    <i class="icon-close-search cl2 m-r-6 fs-15 trans-04 zmdi zmdi-close dis-none"></i>
-                        Search
-                </div>
-            </div>
-          
-            <!-- Search product -->
-            <div class="dis-none panel-search w-full p-t-10 p-b-15">
-                <div class="bor8 dis-flex p-l-15">
-                    <button class="size-113 flex-c-m fs-16 cl2 hov-cl1 trans-04">
-                        <i class="zmdi zmdi-search"></i>
-                    </button>
-
-                    <input class="mtext-107 cl2 size-114 plh2 p-r-15" type="text" name="search-product" placeholder="Search">
-                </div>  
-            </div>
-
-            <!-- Filter -->
-            <!-- TEMPLATE FILTER -->
-
-        </div>
-
-        <div class="row isotope-grid">
-            <!-- PRODUCT LIST -->
-                <?php foreach($data as $r) : ?>
-                    <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item <?= $r['cate_name'] ?>">
-                        <!-- Block2 -->
-                        <div class="block2">
-                            <div class="block2-pic hov-img0 label-new" data-label="<?= $r['cate_name'] ?>">
-                                <img src="<?= base_url ?>catalog/product/<?= $r['prod_image'] ?>" alt="<?= $r['prod_name'] ?>">
-
-                                <a href="<?= base_url ?>user/product-detail/<?= $r['prod_id'] ?>|<?= $r['prod_url'] ?>" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04">
-                                    Quick View
-                                </a>
-                            </div>
-
-                            <div class="block2-txt flex-w flex-t p-t-14">
-                                <div class="block2-txt-child1 flex-col-l ">
-                                    <a href="<?= base_url ?>user/product-detail/<?= $r['prod_url'] ?>+<?= $r['prod_id'] ?>" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-                                        <?= $r['prod_name'] ?>
-                                    </a>
-
-                                    <span class="stext-105 cl3">
-                                        <?= nominal($r['prod_price']) ?>
-                                    </span>
-                                </div>
-
-                                <div class="block2-txt-child2 flex-r p-t-3">
-                                    <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2" onclick="addWish(event, this)" prod-id="<?= $r['prod_id'] ?>" prod-name="<?= $r['prod_name'] ?>" prod-status="false">
-                                        <img class="icon-heart1 dis-block trans-04" src="<?= base_url ?>assets/template-1/images/icons/icon-heart-01.png" alt="ICON">
-                                        <img class="icon-heart2 dis-block trans-04 ab-t-l" src="<?= base_url ?>assets/template-1/images/icons/icon-heart-02.png" alt="ICON">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                <?php endforeach; ?>
-            <!-- # PRODUCT LIST -->
-        </div>
-
-        <!-- Load More -->
-        <div class="flex-c-m flex-w w-full p-t-38">
-            <a href="<?= base_url ?>user/product-list" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn2 p-lr-15 trans-04" style="border:1px solid #222">
-                LOAD MORE
-            </a>
-        </div>
-
-    </div>
-</section>

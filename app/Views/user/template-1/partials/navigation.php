@@ -1,9 +1,9 @@
-<?php  
-	
-	use App\Core\Model;
+<?php
 
-	$model = new Model;
-	$menu = $model->select('*')
+use App\Core\Model;
+
+$model = new Model;
+$menu = $model->select('*')
 	->from('role_menu a')
 	->join('menu b', 'a.role_menu_id', 'b.menu_id')
 	->join('level c', 'a.role_lev_id', 'c.lev_id')
@@ -14,159 +14,108 @@
 	->get();
 
 ?>
-
-<header class="header-v4">
-	<!-- Header desktop -->
-	<div class="container-menu-desktop">
-		<!-- Topbar -->
-		<div class="top-bar">
-			<div class="content-topbar flex-sb-m h-full container">
-				<div class="left-top-bar">
-					<?= $website['web_description'] ?>
-				</div>
-
-				<div class="right-top-bar flex-w h-full">
-					<a href="<?= base_url ?>faq" class="flex-c-m trans-04 p-lr-25">
-						Help & FAQs
-					</a>
-
-					<?php if(isset($_SESSION['status'])) : ?>
-						<a href="<?= base_url ?>my/account" class="flex-c-m trans-04 p-lr-25">
-							My Account
-						</a>
-					<?php else : ?>
-						<a href="<?= base_url ?>auth" class="flex-c-m trans-04 p-lr-25">
-							<i class="fa fa-sign-in"></i> &nbsp; Sign In
-						</a>
-						<a href="<?= base_url ?>auth/register" class="flex-c-m trans-04 p-lr-25">
-							<i class="fa fa-user-plus"></i> &nbsp;Register
-						</a>
-					<?php endif ?>
-				</div>
-			</div>
-		</div>
-
-		<div class="wrap-menu-desktop how-shadow1">
-			<nav class="limiter-menu-desktop container">
-				
-				<!-- Logo desktop -->		
-				<a href="<?= base_url ?>" class="logo">
-					<img src="<?= base_url ?>website/configuration/<?= $website['web_logo'] ?>" alt="<?= $website['web_name'] ?>">
+<header class="header__1 js-header" id="header">
+	<div class="container">
+		<div class="wrapper js-header-wrapper ml-20">
+			<div class="header__logo">
+				<a href="<?= base_url() ?>">
+					<img class="header__logo" id="logo_js" src="<?= base_url() ?>assets/template-2/assets/img/logos/logos-ganimals.png" alt="<?= $website['web_name'] ?>" />
 				</a>
-
-				<!-- Menu desktop -->
-				<div class="menu-desktop">
-					<ul class="main-menu">
-						<?php foreach($menu as $menu_desktop) : ?>
-							<li>
-								<a href="<?= base_url ?><?= $menu_desktop['menu_url'] ?>"><?= $menu_desktop['menu_name'] ?></a>
-							</li>
-						<?php endforeach ?>
-					</ul>
-				</div>	
-
-				<!-- Icon header -->
-				<div class="wrap-icon-header flex-w flex-r-m">
-					<div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 js-show-modal-search">
-						<i class="zmdi zmdi-search"></i>
-					</div>
-
-					<div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti js-show-cart" data-notify="0">
-						<i class="zmdi zmdi-shopping-cart"></i>
-					</div>
-
-					<a href="<?= base_url ?>my/wishlist" class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti" data-notify="0">
-						<i class="zmdi zmdi-favorite-outline"></i>
-					</a>
-				</div>
-			</nav>
-		</div>	
-	</div>
-
-	<!-- Header Mobile -->
-	<div class="wrap-header-mobile">
-		<!-- Logo moblie -->		
-		<div class="logo-mobile">
-			<a href="<?= base_url ?>"><img src="<?= base_url ?>website/configuration/<?= $website['web_logo'] ?>" alt="<?= $website['web_name'] ?>"></a>
-		</div>
-
-		<!-- Icon header -->
-		<div class="wrap-icon-header flex-w flex-r-m m-r-15">
-			<div class="icon-header-item cl2 hov-cl1 trans-04 p-r-11 js-show-modal-search">
-				<i class="zmdi zmdi-search"></i>
 			</div>
 
-			<div class="icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 icon-header-noti js-show-cart" data-notify="0">
-				<i class="zmdi zmdi-shopping-cart"></i>
+			<!-- ==================  -->
+			<div class="header__menu">
+				<ul class="d-flex space-x-20">
+					<li>
+						<a class="color_black" href="<?= base_url() ?>user/home"> Home</a>
+					</li>
+					<li>
+						<a class="color_black" href="<?= base_url() ?>user/page/product"> Product</a>
+					</li>
+					<li>
+						<a class="color_black" href="<?= base_url() ?>user/page/blog"> Blog</a>
+					</li>
+					<li>
+						<a class="color_black" href="<?= base_url() ?>user/page/mitra"> Mitra</a>
+					</li>
+					<li>
+						<a class="color_black" href="<?= base_url() ?>user/page/contact"> Contact </a>
+					</li>
+				</ul>
 			</div>
-
-			<a href="#" class="dis-block icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 icon-header-noti" data-notify="0">
-				<i class="zmdi zmdi-favorite-outline"></i>
-			</a>
-		</div>
-
-		<!-- Button show menu -->
-		<div class="btn-show-menu-mobile hamburger hamburger--squeeze">
-			<span class="hamburger-box">
-				<span class="hamburger-inner"></span>
-			</span>
-		</div>
-	</div>
-
-
-	<!-- Menu Mobile -->
-	<div class="menu-mobile">
-		<ul class="topbar-mobile">
-			<li>
-				<div class="left-top-bar">
-					<?= $website['web_description'] ?>
-				</div>
-			</li>
-
-			<li>
-				<div class="right-top-bar flex-w h-full">
-					<a href="<?= base_url ?>faq" class="flex-c-m trans-04 p-lr-25">
-						Help & FAQs
-					</a>
-
-					<?php if(isset($_SESSION['status'])) : ?>
-						<a href="<?= base_url ?>my/account" class="flex-c-m trans-04 p-lr-25">
-							My Account
+			<!-- ================= -->
+			<div class="header__search">
+				<input type="text" placeholder="Search">
+				<button class="header__result">
+					<i class="ri-search-line"></i>
+				</button>
+			</div>
+			<div class="d-flex align-items-center space-x-15">
+				<?php if (isset($_SESSION['status'])) : ?>
+					<div class="header__notifications">
+						<div class="js-notifications-icon">
+							<i class="ri-shopping-cart-2-line"></i>
+						</div>
+						<div class="notifications_popup space-y-20">
+							<div class="d-flex justify-content-between">
+								<h5>Shopping Cart</h5>
+								<a href="<?= base_url() ?>cart" class="badge color_white">View all</a>
+							</div>
+							<div class="item
+										space-x-20
+										d-flex
+										justify-content-between
+										align-items-center">
+								<img class="thumb" src="<?= base_url() ?>assets/template-2/assets/img/notifications/1.png" alt="...">
+								<div class="details">
+									<a href="activity.html">
+										<h6>Anglo Cow</h6>
+									</a>
+									<p>Rp. 20.000.000</p>
+								</div>
+							</div>
+						</div>
+					</div><?php elseif (!isset($_SESSION['status'])) : ?>
+					<div class="header__btns">
+						<a class="btn btn-grad btn-sm" href="<?= base_url() ?>auth" style="background: white; color: rgb(3,172,14);cursor: pointer;border: 1px solid rgb(3,172,14)!important;">
+							Sign-In
 						</a>
-					<?php else : ?>
-						<a href="<?= base_url ?>auth" class="flex-c-m trans-04 p-lr-25">
-							Sign In
-						</a>
-						<a href="<?= base_url ?>auth/register" class="flex-c-m trans-04 p-lr-25">
+						<a class="btn btn-grad btn-sm" href="<?= base_url() ?>auth/register" style="background: rgb(3,172,14);cursor: pointer;color: white;">
 							Register
 						</a>
+					<?php else : ?>
+						<a href="#" id="connectbtn">
+							<img width="45" src="<?= base_url() ?>assets/template-2/assets/img/icons/metamask.svg" alt="">
+						</a>
 					<?php endif ?>
+					</div>
+					<div class="header__burger js-header-burger"></div>
+			</div>
+			<div class="header__mobile js-header-mobile">
+				<div class="header__mobile__menu space-y-40">
+					<ul class="d-flex space-y-20">
+						<li> <a class="color_black" href="<?= base_url() ?>home"> Home</a> </li>
+						<li> <a class="color_black" href="<?= base_url() ?>product"> Product</a> </li>
+						<li> <a class="color_black" href="<?= base_url() ?>blog"> Blog</a> </li>
+						<li> <a class="color_black" href="<?= base_url() ?>mitra"> Mitra</a> </li>
+						<li> <a class="color_black" href="<?= base_url() ?>contact"> Contact</a> </li>
+					</ul>
+					<div class="space-y-20">
+						<div class="header__search in_mobile w-full">
+							<input type="text" placeholder="Search" />
+							<button class="header__result">
+								<i class="ri-search-line"></i>
+							</button>
+						</div>
+						<a class="btn btn-grad btn-sm" href="<?= base_url() ?>login" style="background: white; color: rgb(3,172,14);cursor: pointer;border: 1px solid rgb(3,172,14)!important; width: 50%;">
+							Login
+						</a>
+						<a class="btn btn-grad btn-sm" href="<?= base_url() ?>register" style="background: rgb(3,172,14);cursor: pointer;color: white; width: 50%;">
+							Register
+						</a>
+					</div>
 				</div>
-			</li>
-		</ul>
-
-		<ul class="main-menu-m">
-			<?php foreach($menu as $menu_mobile) : ?>
-				<li>
-					<a href="<?= base_url ?><?= $menu_mobile['menu_url'] ?>"><?= $menu_mobile['menu_name'] ?></a>
-				</li>
-			<?php endforeach ?>
-		</ul>
-	</div>
-
-	<!-- Modal Search -->
-	<div class="modal-search-header flex-c-m trans-04 js-hide-modal-search">
-		<div class="container-search-header">
-			<button class="flex-c-m btn-hide-modal-search trans-04 js-hide-modal-search">
-				<img src="<?= base_url ?>assets/template-1/images/icons/icon-close2.png" alt="CLOSE">
-			</button>
-
-			<form id="search" class="wrap-search-header flex-w p-l-15">
-				<button class="flex-c-m trans-04">
-					<i class="zmdi zmdi-search"></i>
-				</button>
-				<input class="plh3" type="text" name="search" placeholder="Search...">
-			</form>
+			</div>
 		</div>
 	</div>
 </header>
